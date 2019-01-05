@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb",
+  "rules":{
+    "no-use-before-define": ["error", { "functions": false }],
+    "max-len": ["error", 130],
+    "arrow-body-style" : 0,
+  },
+  "globals": {
+    "afterEach": true,
+    "describe": true,
+    "it": true,
+    "Stripe": true,
+    "xit": true
+   }
+}

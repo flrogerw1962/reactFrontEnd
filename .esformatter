@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "esformatter-semicolons",
+    "esformatter-add-trailing-commas",
+    "esformatter-spaced-lined-comment",
+    "esformatter-quote-props"
+  ],
+  "whiteSpace": {
+    "before": {
+      "PropertyName": 1,
+      "ObjectExpressionClosingBrace": 1
+    },
+    "after": {
+      "ObjectExpressionOpeningBrace": 1
+    }
+  }
+}

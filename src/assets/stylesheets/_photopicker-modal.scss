@@ -1,0 +1,344 @@
+@import './modules/_variables';
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+@font-face{
+  font-family:'Marydale';
+  src:url('../fonts/marydale/marydale-webfont.eot');
+  src:url('../fonts/marydale/marydale-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/marydale/marydale-webfont.woff') format('woff'), url('../fonts/marydale/marydale-webfont.ttf') format('truetype'), url('../fonts/marydale/marydale-webfont.svg#marydaleregular') format('svg');
+  font-weight:normal;
+  font-style:normal
+}
+.blackout-screen {
+  background-color: rgba(black, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 99999999999;
+}
+
+.modal {
+  background: $mine-shaft-grey;
+  bottom: 20px;
+  color: white;
+  left: 14px;
+  overflow: auto;
+  padding: 8px;
+  position: fixed;
+  right: 14px;
+  top: 20px;
+
+  .auth-page__input {
+    color: $body-text-grey;
+  }
+}
+
+.modal__header {
+  height: 40px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+
+  ul {
+    height: 40px;
+    list-style: none;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0 4px;
+
+    &.selected, &:hover {
+      &.photopicker__camera-roll {
+        border-bottom: 2px solid $green;
+      }
+      &.photopicker__photo-and-go {
+        border-bottom: 2px solid $raspberry-pink;
+      }
+      &.facebook__photo-and-go {
+        border-bottom: 2px solid $facebook;
+      }
+      &.instagram__photo-and-go {
+        border-bottom: 2px solid $instagram;
+      }
+    }
+
+    a {
+      color: white;
+      display: inline-block;
+      font-size: 16px;
+      height: 38px;
+      line-height: 38px;
+      text-decoration: none;
+      vertical-align: middle;
+    }
+  }
+}
+
+.photouploader {
+
+  i {
+    display: block;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .photouploader__btn-container {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  a.btn {
+    background-color: $green;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 20px auto;
+    padding: 8px 45px;
+    vertical-align: middle;
+  }
+}
+
+
+ div.social-wrap input[type="button"] {
+    height: 35px;
+    background: none;
+    border: none;
+    display: block;
+    background-size: 35px 35px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    color: white;
+    font-family:"Merriweather Sans", sans-serif;
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: 220px;
+    margin: 10px;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px gray;
+    text-shadow: rgba(0, 0, 0, .5) -1px -1px 0;
+}
+input[type="button"]#facebook {
+    border-color: #2d5073;
+    background-color: #3b5998;
+    color: #FFFFFF;
+    text-align: center;
+}
+input[type="button"]#instagram {
+    border-color: #2d5073;
+    background-color: #3b5998;
+}
+.instagram {
+  text-align: center;
+
+  .btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    margin-bottom: 20px;
+  }
+}
+.facebook {
+  text-align: center;
+  .btn-primary {
+    color: #fff;
+    background-color: $facebook;
+    border-color: $facebook;
+    margin-bottom: 20px;
+    font-size: initial;
+  }
+}
+.title-selector {
+  font-family: 'Lato', sans-serif;
+  font-size: 30px !important;
+  text-align: center;
+  padding-bottom: 20px;
+  select {
+    font-size: 14px;
+    text-align-last: center;
+  }
+}
+
+.photopicker__image-list {
+  bottom: 100px;
+  left: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  right: 20px;
+  top: 80px;
+}
+
+.photopicker__image {
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 2px 2px 6px #1E1E1E;
+  cursor: pointer;
+  display: inline-block;
+  height: 96px;
+  margin: 8px;
+  width: 96px;
+
+  .photopicker__image-selected {
+    background-color: rgba(35, 188, 104, 0.6);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 115px;
+    height: 115px;
+  }
+}
+.photoList__image-list {
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: auto;
+  text-align: center;
+  .add_to_list {
+    display: block;
+    margin: 15px auto;
+  }
+  .photopicker__image-selected {
+    background-color: rgba(35, 188, 104, 0.6);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 115px;
+    height: 115px;
+  }
+}
+.photoList__image {
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 2px 2px 6px #1E1E1E;
+  cursor: pointer;
+  display: inline-block;
+  height: 115px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  width: 115px;
+
+}
+.folderList__image-list {
+  bottom: 100px;
+  left: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  right: 20px;
+  top: 80px;
+}
+.folderList__image {
+  background-position: center center;
+  background-size: 90% 90%;
+  box-shadow: 2px 2px 6px #1E1E1E;
+  cursor: pointer;
+  display: inline-block;
+  height: 96px;
+  margin: 10px;
+  background-repeat: no-repeat;
+  width: 96px;
+
+}
+.folder {
+  -moz-perspective: 800px;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  margin: 35px;
+  z-index: 0;
+}
+
+.folder div {
+    width:150px;
+    height:115px;
+
+    background-color:$facebook;
+
+    // Enabling 3d space for the transforms
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    // Enabling a smooth animated transition
+    -moz-transition:0.5s;
+    -webkit-transition:0.5s;
+    transition:0.5s;
+
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-75px;
+}
+
+.folder .front {
+    border-radius:5px 5px 0 0;
+
+    -moz-transform:rotateX(-10deg);
+    -webkit-transform:rotateX(-10deg);
+    transform:rotateX(-10deg);
+
+    -moz-transform-origin:50% 100%;
+    -webkit-transform-origin:50% 100%;
+    transform-origin:50% 100%;
+
+    background-image: -moz-linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-image: -webkit-linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-image: linear-gradient(top, #93bad8 0%, #6c9dc0 85%, #628faf 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow:0 -2px 2px black, 0 1px rgba(255,255,255,0.35) inset;
+    overflow: hidden;
+    z-index:10;
+}
+
+.folder .back {
+    background-image: $facebook;
+    border-radius:0 10px 0 0;
+    box-shadow:0 -1px 1px rgba(0,0,0,0.15);
+}
+
+.folder .back:before {
+    content:'';
+    width:60px;
+    height:10px;
+    border-radius:4px 4px 0 0;
+    background-color:$facebook;
+    position:absolute;
+    top:-10px;
+    left:0px;
+    box-shadow:0 -1px 2px rgba(0,0,0,0.50);
+}
+
+.folder .back:after {
+    content:'';
+    width:100%;
+    height:4px;
+    border-radius:5px;
+    position:absolute;
+    bottom:5px;
+    left:0px;
+    box-shadow:0 4px 8px #333;
+}
+
+.folder:hover .front {
+    -moz-transform:rotateX(-40deg);
+    -webkit-transform:rotateX(-40deg);
+    transform:rotateX(-40deg);
+}
+
+.my-account-photos {
+  bottom: 100px;
+  left: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  right: 20px;
+  top: 80px;
+}
+
+@media (min-width: 1025px) {
+}

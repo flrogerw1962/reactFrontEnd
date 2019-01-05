@@ -1,0 +1,60 @@
+@import './modules/_variables';
+
+.category-filter {
+  background: $mine-shaft-grey;
+  height: 56px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+
+  ul {
+    height: 56px;
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 0 4px;
+
+    &.selected, &:hover {
+      border-bottom: 3px solid $raspberry-pink;
+    }
+
+    a {
+      color: white;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      height: 53px;
+      line-height: 53px;
+      text-decoration: none;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+}
+@media (min-width: 1025px) {
+.category-filter {
+  height: 70px;
+
+  ul {
+    height: 70px;
+  }
+  li {
+    margin: 0 16px;
+    padding: 0 6px;
+
+    a {
+      height: 67px;
+      line-height: 67px;
+    }
+  }
+
+}
+}

@@ -1,0 +1,61 @@
+@import './modules/_variables';
+
+.subheader {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px; 
+  .subheader__content {
+    margin-top: 85px;
+  }
+  #subheader_img {
+    max-width: 100%;
+    height: auto;
+    content: url('../images/express_mobile.png');
+  }
+
+  h2 {
+    color: white;
+    font-family: 'Cabin Sketch';
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 7px 15px;
+  }
+}
+
+@media (min-width: 570px) {
+.subheader {
+  #subheader_img {
+    max-width: 100%;
+    height: auto;
+    content: url('../images/express_desktop.png');
+  }
+}
+}
+@media (min-width: 1024px) {
+.subheader {
+  // min-height: 520px;
+
+  .subheader__content {
+    margin-top: 100px;
+  }
+  #subheader_img {
+    max-width: 100%;
+    height: auto;
+    content: url('../images/express_desktop.png');
+  }
+  h2 {
+    font-size: 48px;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 8px 24px;
+  }
+}
+}

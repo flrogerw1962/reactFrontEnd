@@ -1,0 +1,5 @@
+FROM nodesource/trusty:6.2.0
+
+RUN npm install -g node-sass
+
+CMD [ "bash","-c", "npm start" ]

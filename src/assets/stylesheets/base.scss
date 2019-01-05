@@ -1,0 +1,96 @@
+@import './vendor/bootstrap.min';
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900|Cabin+Sketch:700);
+
+@import './modules/_variables';
+@import './modules/_buttons';
+
+html, body {
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+}
+
+body {
+  line-height: 1;
+  background-color: white;
+  color: $body-text-grey;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  margin: 1.0em 0;
+}
+
+p {
+  line-height: 20px;
+}
+
+.content {
+  padding: 0 20px;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.transparent-screen {
+  background: rgba(0,0,0,0.2);
+  height: 100%;
+  width: 100%;
+  z-index: 999999999;
+
+  .dialog {
+    background: rgba(0,0,0,0.6);
+    border-radius: 3px;
+    overflow: auto;
+    position: fixed;
+  }
+
+  .dialog__content {
+    text-align: center;
+    color: white;
+    font-family:  "Cabin Sketch";
+    font-size: 20px;
+    padding:20px;
+    max-width: 360px;
+    .btn {
+      border: 1px black;
+      padding: 10px;
+      margin: 10px;
+      display: block;
+    }
+  }
+}
+
+.auth-fields {
+  text-align: center;
+  margin-top: 80px;
+
+  i {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .auth-fields__btn-container {
+    margin: 0 auto;
+    .btn {
+      width: 200px;
+      height: 40px;
+      min-height: 40px;
+      font-size: 16px;
+      line-height: 40px;
+      vertical-align: middle;
+      font-weight: bold;
+      display: inline-block;
+    }
+  }
+}
